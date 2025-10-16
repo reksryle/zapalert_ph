@@ -1,37 +1,21 @@
 {
-  "name": "zapalert-ph-frontend",
-  "private": true,
+  "name": "zapalert-ph-backend",
   "version": "1.0.0",
-  "type": "module",
+  "type": "module",  
+  "main": "server.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.1",
-    "axios": "^1.6.2",
-    "react-hot-toast": "^2.4.1",
-    "react-leaflet": "^4.2.1",
-    "leaflet": "^1.9.4",
-    "socket.io-client": "^4.7.4",
-    "lucide-react": "^0.263.0"
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.1.0",
+    "socket.io": "^4.7.4"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.2.0",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@vitejs/plugin-react": "^4.1.1",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.55.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "vite": "^4.5.0"
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
