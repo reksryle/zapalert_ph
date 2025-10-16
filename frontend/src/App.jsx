@@ -1,61 +1,21 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import PendingUsers from "./pages/admin/PendingUsers";
-import AllUsers from "./pages/admin/AllUsers";
-import ReportsLog from "./pages/admin/ReportsLog";
-import Announcement from "./pages/admin/Announcement";
-
-import ResponderDashboard from "./pages/responder/ResponderDashboard";
-import ResidentDashboard from "./pages/resident/ResidentDashboard";
-
-import ProtectedRoute from "./components/ProtectedRoute";
+import Landing from "./pages/Landing";
+import EmergencyReport from "./pages/EmergencyReport";
+import HelperRegistration from "./pages/HelperRegistration";
+import EmergencyMap from "./pages/EmergencyMap";
+import 'leaflet/dist/leaflet.css';
+import './index.css';
+import HelperDashboard from './components/HelperDashboard';
 
 function App() {
   return (
     <Routes>
-      {/* Public Routes */}
-      <Route path="/" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-
-      {/* Admin */}
-      <Route
-        path="/admin"
-        element={
-          <ProtectedRoute allowedRole="admin">
-            <AdminDashboard />
-          </ProtectedRoute>
-        }
-      >
-        <Route index element={<PendingUsers />} />
-        <Route path="pending-users" element={<PendingUsers />} />
-        <Route path="all-users" element={<AllUsers />} />
-        <Route path="reports-log" element={<ReportsLog />} />
-        <Route path="announcement" element={<Announcement />} />
-      </Route>
-
-      {/* Responder */}
-      <Route
-        path="/responder"
-        element={
-          <ProtectedRoute allowedRole="responder">
-            <ResponderDashboard />
-          </ProtectedRoute>
-        }
-      />
-
-      {/* Resident */}
-      <Route
-        path="/resident"
-        element={
-          <ProtectedRoute allowedRole="resident">
-            <ResidentDashboard />
-          </ProtectedRoute>
-        }
-      />
+      <Route path="/" element={<Landing />} />
+      <Route path="/emergency" element={<EmergencyReport />} />
+      <Route path="/helper" element={<HelperRegistration />} />
+      <Route path="/map" element={<EmergencyMap />} />
+      <Route path="/helper-dashboard" element={<HelperDashboard />} />
     </Routes>
   );
 }
