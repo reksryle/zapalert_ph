@@ -5,7 +5,7 @@ const emergencySchema = new mongoose.Schema({
   type: { 
     type: String, 
     required: true,
-    enum: ['medical', 'rescue', 'food', 'shelter', 'other']
+    enum: ['medical', 'rescue', 'food', 'shelter', 'other', 'multiple'] // ADD 'multiple' HERE
   },
   location: {
     latitude: { type: Number, required: true },
@@ -26,7 +26,11 @@ const emergencySchema = new mongoose.Schema({
   reportedAt: { type: Date, default: Date.now },
   // ADD THESE NEW FIELDS:
   helpOffersCount: { type: Number, default: 0 },
-  ongoingHelpCount: { type: Number, default: 0 }
+  ongoingHelpCount: { type: Number, default: 0 },
+  requestedItems: { 
+    type: [String], 
+    default: [] // ADD THIS FIELD TO STORE ALL SELECTED HELP TYPES
+  }
 });
 
 // Use named export
