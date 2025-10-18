@@ -15,7 +15,7 @@ const Landing = () => {
         />
         
         <h1 className="text-3xl font-bold text-gray-800 mb-2">
-          Emergency Response
+          ZapAlert
         </h1>
         <p className="text-gray-600 mb-6">
           Philippines Earthquake Coordination
@@ -23,31 +23,31 @@ const Landing = () => {
 
         {/* Action Buttons */}
         <div className="space-y-4">
-<button
-  onClick={() => navigate('/victim-dashboard')}
-  className="w-full py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:scale-105"
->
-  🆘 I NEED HELP
-</button>
+        <button
+          onClick={() => navigate('/victim-dashboard')}
+          className="w-full py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:scale-105"
+        >
+          I NEED HELP
+        </button>
 
-<button
-  onClick={() => navigate('/helper-dashboard')}  // CHANGE THIS LINE
-  className="w-full py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg hover:scale-105"
->
-  🦺 I CAN HELP
-</button>
-          <button
-  onClick={() => navigate('/map')}
-  className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:scale-105"
->
-  🗺️ View Emergency Map
-</button>
+        <button
+          onClick={() => navigate('/helper-dashboard')}  // CHANGE THIS LINE
+          className="w-full py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg hover:scale-105"
+        >
+          I CAN HELP
+        </button>
+                  <button
+          onClick={() => navigate('/map')}
+          className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:scale-105"
+        >
+          View Emergency Map
+        </button>
         </div>
 
         {/* Emergency Notice */}
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="text-sm text-yellow-800 font-medium">
-            ⚠️ For immediate life-threatening emergencies, 
+            For immediate life-threatening emergencies, 
             call local emergency services first.
           </p>
         </div>
