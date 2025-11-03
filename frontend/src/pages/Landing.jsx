@@ -54,7 +54,6 @@ const Landing = () => {
             onClick={openWeatherMap}
             className="w-full py-4 bg-cyan-600 text-white rounded-xl font-bold text-lg hover:bg-cyan-700 transition-all shadow-lg hover:scale-105 flex items-center justify-center gap-2"
           >
-            <span>🌤️</span>
             Live Weather Update
           </button>
         </div>
