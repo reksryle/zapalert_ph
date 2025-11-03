@@ -51,7 +51,7 @@ const helperIcon = new L.Icon({
 });
 
 // Center on Visayas
-const VISAYAS_CENTER = [10.3157, 123.8854]; // Cebu area
+const VISAYAS_CENTER = [10.306711119471714, 123.9011395473235]; //Barangay Zapatera
 const DEFAULT_ZOOM = 15;
 
 // Map controller component
