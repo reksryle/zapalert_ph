@@ -52,7 +52,7 @@ const helperIcon = new L.Icon({
 
 // Center on Visayas
 const VISAYAS_CENTER = [10.306711119471714, 123.9011395473235]; //Barangay Zapatera
-const DEFAULT_ZOOM = 15;
+const DEFAULT_ZOOM = 16;
 
 // Map controller component
 function MapController({ bounds }) {
@@ -205,8 +205,8 @@ const EmergencyMap = () => {
           >
             ← Back to Home
           </button>
-          <h1 className="text-3xl font-bold text-white mb-2">Philippines Emergency Map</h1>
-          <p className="text-white/80">Real-time emergency coordination across the Philippines</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Brgy. Zapatera Emergency Map</h1>
+          <p className="text-white/80">Real-time emergency coordination across in Brgy. Zapatera</p>
         </div>
 
         {/* Stats Cards */}
@@ -215,10 +215,7 @@ const EmergencyMap = () => {
             <div className="text-2xl font-bold text-red-600">{emergencies.length}</div>
             <div className="text-sm font-medium text-gray-700">Active Emergencies</div>
           </div>
-          <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-4 text-center border border-white/30">
-            <div className="text-2xl font-bold text-green-600">{helpers.length}</div>
-            <div className="text-sm font-medium text-gray-700">Available Helpers</div>
-          </div>
+
           <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-4 text-center border border-white/30">
             <div className="text-2xl font-bold text-blue-600">
               {emergencies.reduce((total, emergency) => total + (emergency.helpOffersCount || 0), 0)}
@@ -322,16 +319,16 @@ const EmergencyMap = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <button
-              onClick={() => navigate("/emergency")}
+              onClick={() => navigate("/victim-dashboard")}
               className="flex-1 py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:scale-105"
             >
-              🆘 Report Emergency
+              I NEED HELP
             </button>
             <button
               onClick={() => navigate("/helper-dashboard")}
               className="flex-1 py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg hover:scale-105"
             >
-              🦺 Become a Helper
+              I CAN HELP
             </button>
           </div>
         </div>
@@ -357,7 +354,7 @@ const EmergencyMap = () => {
               <span className="text-gray-700">Shelter</span>
             </div>
             <div className="flex items-center space-x-3">
-              <img src="/icons/helper.png" alt="Helper" className="w-5 h-5" />
+              <img src="/icons/arrived.png" alt="Helper" className="w-5 h-5" />
               <span className="text-gray-700">Available Helper</span>
             </div>
           </div>
