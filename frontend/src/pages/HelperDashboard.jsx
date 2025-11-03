@@ -147,8 +147,8 @@ const HelperDashboard = () => {
     return helpType ? helpType.emoji : "🆘";
   };
 
-  // Philippines center coordinates (Visayas area)
-  const philippinesCenter = [11.881655, 122.883006];
+// Barangay Zapatera center coordinates
+const philippinesCenter = [10.306711119471714, 123.9011395473235]; // Barangay Zapatera
 
 useEffect(() => {
   // Socket connection for real-time updates
@@ -387,7 +387,7 @@ const completedHelpOffers = myHelpOffers.filter(offer => offer.status === 'compl
               <div className="h-[500px] rounded-xl overflow-hidden border border-gray-300 bg-gray-100 shadow-inner">
                 <MapContainer
                   center={philippinesCenter}
-                  zoom={6}
+                  zoom={16}
                   style={{ height: "100%", width: "100%" }}
                   ref={mapRef}
                 >
