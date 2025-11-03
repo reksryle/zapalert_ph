@@ -18,7 +18,7 @@ const Landing = () => {
           ZapAlert
         </h1>
         <p className="text-gray-600 mb-6">
-          Philippines Earthquake Coordination
+          Zapatera Typhoon Coordination
         </p>
 
         {/* Action Buttons */}
