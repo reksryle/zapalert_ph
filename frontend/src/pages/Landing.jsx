@@ -50,7 +50,7 @@ const Landing = () => {
             For immediate life-threatening emergencies, 
             call local emergency services first.
           </p>
-          <p className="text-sm text-yellow-800 font-medium">
+          <p className="text-sm text-black-800 font-small">
             EMERGENCY HOTLINE - 911 | BRGY. ZAPATERA - 503-6465
           </p>
         </div>
