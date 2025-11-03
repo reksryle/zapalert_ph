@@ -52,7 +52,7 @@ const helperIcon = new L.Icon({
 
 // Center on Visayas
 const VISAYAS_CENTER = [10.3157, 123.8854]; // Cebu area
-const DEFAULT_ZOOM = 7;
+const DEFAULT_ZOOM = 13;
 
 // Map controller component
 function MapController({ bounds }) {
