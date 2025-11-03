@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 const Landing = () => {
   const navigate = useNavigate();
 
+  // Function to open weather map in new tab
+  const openWeatherMap = () => {
+    window.open("https://zoom.earth/maps/wind-speed/#view=10.6174,123.8742,7.76z/model=icon", "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-500 via-red-600 to-orange-500 flex items-center justify-center p-4">
       <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl w-full max-w-md p-8 text-center border border-white/30">
@@ -23,25 +28,35 @@ const Landing = () => {
 
         {/* Action Buttons */}
         <div className="space-y-4">
-        <button
-          onClick={() => navigate('/victim-dashboard')}
-          className="w-full py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:scale-105"
-        >
-          I NEED HELP
-        </button>
+          <button
+            onClick={() => navigate('/victim-dashboard')}
+            className="w-full py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:scale-105"
+          >
+            I NEED HELP
+          </button>
 
-        <button
-          onClick={() => navigate('/helper-dashboard')}  // CHANGE THIS LINE
-          className="w-full py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg hover:scale-105"
-        >
-          I CAN HELP
-        </button>
-                  <button
-          onClick={() => navigate('/map')}
-          className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:scale-105"
-        >
-          View Emergency Map
-        </button>
+          <button
+            onClick={() => navigate('/helper-dashboard')}
+            className="w-full py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg hover:scale-105"
+          >
+            I CAN HELP
+          </button>
+          
+          <button
+            onClick={() => navigate('/map')}
+            className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:scale-105"
+          >
+            View Emergency Map
+          </button>
+
+          {/* NEW: Live Weather Update Button */}
+          <button
+            onClick={openWeatherMap}
+            className="w-full py-4 bg-cyan-600 text-white rounded-xl font-bold text-lg hover:bg-cyan-700 transition-all shadow-lg hover:scale-105 flex items-center justify-center gap-2"
+          >
+            <span>🌤️</span>
+            Live Weather Update
+          </button>
         </div>
 
         {/* Emergency Notice */}
